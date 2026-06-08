@@ -225,21 +225,6 @@
     "roomtype": "entire_home"
   },
   {
-    "id": 485627,
-    "name": "Appartement design & ambiance cosy",
-    "city": "Chagny",
-    "region": "Bourgogne",
-    "guests": 2,
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "beds": 1,
-    "price": 55,
-    "rating": 9.6,
-    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-485627-7PFRW8BDP919vdbjSp-QuFyZ7icEtkA3BWsv4mE4BEY-698a3fd80c3ea",
-    "photos": 22,
-    "roomtype": "entire_home"
-  },
-  {
     "id": 465753,
     "name": "La Grange de Gigi",
     "city": "Givry",
@@ -297,6 +282,21 @@
     "rating": 9.5,
     "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-465741-K1ufzpiXcSGnsCqIXnqxhA5eP-uWJmP1eCMPrXnciOY-693e83d10791d",
     "photos": 23,
+    "roomtype": "entire_home"
+  },
+  {
+    "id": 485627,
+    "name": "Appartement design & ambiance cosy",
+    "city": "Chagny",
+    "region": "Bourgogne",
+    "guests": 2,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "beds": 1,
+    "price": 55,
+    "rating": 9.5,
+    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-485627-7PFRW8BDP919vdbjSp-QuFyZ7icEtkA3BWsv4mE4BEY-698a3fd80c3ea",
+    "photos": 22,
     "roomtype": "entire_home"
   },
   {
@@ -805,7 +805,7 @@
     "beds": 1,
     "price": 350,
     "rating": 0,
-    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-556640-8rKau9XqkrVqCRSE-koq2FxNirU0rSaBIfHvRPOqzPY-6a22faaf1aa32",
+    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-556640-5rDG87LqXpFjEgygUl0HMtBZ8jeJemv437-M-F58x9U-6a268d0f188fb",
     "photos": 6,
     "roomtype": "entire_home"
   },
@@ -1755,6 +1755,21 @@
     "roomtype": "entire_home"
   },
   {
+    "id": 557285,
+    "name": "Cocon urbain (2)",
+    "city": "Le Creusot",
+    "region": "Bourgogne",
+    "guests": 2,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "beds": 1,
+    "price": 41,
+    "rating": 0,
+    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-557285-EQc--WjgaT0Izdu8Lqdv9L30BnBasYZEXPD881epk1mE-6a269a1b0352a",
+    "photos": 6,
+    "roomtype": "entire_home"
+  },
+  {
     "id": 491876,
     "name": "la parenthèse du canal",
     "city": "Fragnes-La Loyère",
@@ -1825,7 +1840,7 @@
     "beds": 1,
     "price": 41,
     "rating": 10,
-    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-556639-rIxIOJ--KGyrdWMD58s2WFvnpFlrFFrGre05jAMFINTU-6a22fab3f3e38",
+    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-556639-WFARpeyHnWYk5vePJF6YMbd-w99aBRlOEY3h3pUCc9g-6a26930c90f74",
     "photos": 6,
     "roomtype": "entire_home"
   }
