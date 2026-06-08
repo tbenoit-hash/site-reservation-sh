@@ -1,9 +1,24 @@
 [
   {
+    "id": 465754,
+    "name": "Les Vagastines 1",
+    "city": "Saint-Germain-du-Plain",
+    "region": "Bourgogne",
+    "guests": 6,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "beds": 4,
+    "price": 250,
+    "rating": 9.7,
+    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-465754-yErgQuk2r6jZGqZc4CvwoflnlICif0BW6NzNNCvcHIk-693ea75e18b6c",
+    "photos": 44,
+    "roomtype": "entire_home"
+  },
+  {
     "id": 496304,
     "name": "Le Megevand",
     "city": "Demi-Quartier",
-    "region": "Bourgogne",
+    "region": "Alpes / Ski",
     "guests": 8,
     "bedrooms": 4,
     "bathrooms": 3,
@@ -18,7 +33,7 @@
     "id": 497952,
     "name": "La Croix Du Sud",
     "city": "La Londe-les-Maures",
-    "region": "Bourgogne",
+    "region": "Côte d'Azur",
     "guests": 8,
     "bedrooms": 4,
     "bathrooms": 4,
@@ -27,21 +42,6 @@
     "rating": null,
     "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-497952-bicpmOVHFG4cjq0--se4NZHnsgWhMcTNl8DX2OZl7IO4-69b97468722e4",
     "photos": 54,
-    "roomtype": "entire_home"
-  },
-  {
-    "id": 465754,
-    "name": "Les Vagastines 1",
-    "city": "Saint-Germain-du-Plain",
-    "region": "Bourgogne",
-    "guests": 6,
-    "bedrooms": 3,
-    "bathrooms": 3,
-    "beds": 4,
-    "price": 250,
-    "rating": 9.7,
-    "cover": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/136426-465754-yErgQuk2r6jZGqZc4CvwoflnlICif0BW6NzNNCvcHIk-693ea75e18b6c",
-    "photos": 44,
     "roomtype": "entire_home"
   },
   {
