@@ -38,22 +38,29 @@ RedirectMatch 301 ^/village-motel.*$ /#groupes
 RedirectMatch 301 ^/.*\.php$ /
 ```
 
+## Charte graphique & contenu
+
+- La **charte reprend celle de la carte 2026** du restaurant (le PDF publié sur
+  leur site) : fond blanc/vert sauge, bleu ardoise, typographies épurées, et le
+  **logo écusson recréé en SVG** (« Brasserie · La Flambée · Grill · Pizzéria »),
+  avec la mention **Maître Restaurateur**.
+- **La carte et les prix sont ceux de la carte 2026** (menus 28 € et 38 €,
+  formules du midi 17–22 €, menu enfants 9 €, entrées, plats, grill, pizzas).
+- **Règle de service affichée** (encadré de la carte + horaires + réservation) :
+  menus et formules servis jusqu'à **13h30** le midi et **21h30** le soir ;
+  au-delà, service **à la carte uniquement**.
+
 ## À vérifier / personnaliser avant mise en ligne
 
-Le contenu a été rédigé à partir des informations publiques (site actuel,
-annuaires, avis). **À faire valider par le restaurateur :**
-
-1. **Les horaires** — l'ancien PDF dit « du mardi au samedi », les annuaires
-   disent « 7j/7 » : j'ai retenu mardi–samedi. Corriger si besoin **à deux
-   endroits** dans `index.html` : le tableau des horaires ET le bloc JSON-LD
-   `openingHoursSpecification` en haut du fichier.
-2. **Les prix des menus** (13,90 / 19,90 / 33 / 9 €) et les plats — repris des
-   sources publiques, à ajuster.
-3. **Les photos** — le site fonctionne sans, mais 4-5 vraies photos (cheminée,
+1. **Les horaires** (mardi–samedi, 12h-14h / 19h-22h, repris de la carte) —
+   en cas de changement, corriger **à deux endroits** dans `index.html` :
+   le tableau des horaires ET le bloc JSON-LD `openingHoursSpecification`.
+   Penser aussi à corriger les annuaires qui affichent encore « 7j/7 ».
+2. **Les photos** — le site fonctionne sans, mais 4-5 vraies photos (cheminée,
    côte de bœuf, terrasse, salle) le transformeront. Prévoir aussi une photo
    `photos/facade.jpg` : elle sert d'aperçu quand on partage le lien sur
    WhatsApp/Facebook (balise `og:image` déjà en place).
-4. L'**adresse email** du restaurant si l'on veut ajouter un contact email.
+3. L'**adresse email** du restaurant si l'on veut ajouter un contact email.
 
 ## Ce que cette refonte améliore (vs l'ancien site)
 
@@ -63,6 +70,7 @@ annuaires, avis). **À faire valider par le restaurateur :**
 | Carte | PDF à télécharger | en HTML, lisible et indexable par Google |
 | Réservation | numéro caché dans une page contact | bouton « Appeler » partout (1 clic sur mobile) |
 | Titres SEO | identiques sur toutes les pages, suroptimisés | titre unique et naturel |
+| Charte | — | alignée sur la carte 2026 (sauge, bleu ardoise, logo écusson) |
 | Données structurées | aucune | `schema.org/Restaurant` complet (horaires, adresse, cuisine) |
 | Partage WhatsApp/Facebook | lien nu | aperçu riche (balises Open Graph) |
 | Sitemap / robots | absents | inclus |
