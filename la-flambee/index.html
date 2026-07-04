@@ -85,8 +85,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .logo{display:flex;align-items:center;gap:13px}
 .logo svg{height:58px;width:auto}
 .logo small{color:var(--muted);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;display:block}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{font-size:.86rem;color:var(--muted);font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:20px}
+.nav-links a{font-size:.8rem;color:var(--muted);font-weight:500;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .nav-links a:hover{color:var(--blue)}
 @media(max-width:860px){.nav-links a:not(.btn){display:none}}
 
@@ -156,6 +156,17 @@ section.alt{background:var(--sage-mist)}
 .dish .p{color:var(--blue);font-weight:600;white-space:nowrap;font-size:.95rem}
 .carte-note{margin-top:36px;color:var(--muted);font-size:.86rem}
 .carte-note a{color:var(--blue-deep);font-weight:600}
+
+/* Galerie photos */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.gallery figure{margin:0;position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--sage-soft);border:1px solid var(--line)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.3s transform}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figure::after{content:attr(data-label);position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-size:.82rem;
+  letter-spacing:.08em;background:linear-gradient(180deg,transparent,rgba(38,57,71,.72))}
+.gallery figure.empty img{display:none}
+.gallery figure.empty::after{inset:0;display:grid;place-items:center;padding:16px;background:none;color:var(--blue);font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;text-align:center}
 
 /* Bandeau pizza 24/7 */
 .pizza{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;background:var(--sage-soft);
@@ -228,9 +239,10 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--paper);c
       <small>Maître<br>Restaurateur<br>· Tournus ·</small>
     </a>
     <nav class="nav-links">
-      <a href="#maison">Le restaurant</a>
       <a href="#carte">La carte</a>
-      <a href="#groupes">Groupes</a>
+      <a href="#vins">Les vins</a>
+      <a href="#photos">Photos</a>
+      <a href="#groupes">Groupes &amp; motel</a>
       <a href="#infos">Infos &amp; accès</a>
       <a class="btn btn-blue" href="tel:+33385511241">📞 Réserver</a>
     </nav>
@@ -254,6 +266,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--paper);c
       <div><b>19 av. du Clos Mouron</b>71700 Tournus</div>
       <div><b>03 85 51 12 41</b>réservation conseillée le week-end</div>
       <div><b>Pizzas 24h/24</b>au distributeur, devant le restaurant</div>
+      <div><b>Parking gratuit</b>facile, sur place — A6 sortie 27</div>
     </div>
   </div>
 </section>
@@ -268,7 +281,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--paper);c
     <div class="feats">
       <div class="feat"><div class="ic">🔥</div><h3>Grillades au feu de bois</h3><p>Côte de bœuf charolaise, entrecôtes et belles pièces saisies à la braise, devant vous.</p></div>
       <div class="feat"><div class="ic">🐓</div><h3>Produits de Bourgogne</h3><p>Poularde de Bresse, escargots de Bourgogne, œufs en meurette et vins de Saône-et-Loire.</p></div>
-      <div class="feat"><div class="ic">🌳</div><h3>Terrasse au jardin</h3><p>Aux beaux jours, une grande terrasse ombragée dans un cadre verdoyant et calme.</p></div>
+      <div class="feat"><div class="ic">🅿️</div><h3>Parking facile &amp; gratuit</h3><p>Stationnement gratuit sur place, juste devant le restaurant — à 400 m de la sortie 27 de l'A6.</p></div>
       <div class="feat"><div class="ic">🍕</div><h3>Pizzas maison</h3><p>Pétries et cuites au feu de bois — sur place, à emporter, et au distributeur 24h/24.</p></div>
     </div>
   </div>
@@ -354,7 +367,48 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--paper);c
       </div>
     </div>
 
+    <div class="carte-grp" id="vins">
+      <h3>La cave — carte des vins</h3>
+      <p class="sub">Une cave tournée vers la Bourgogne et ses voisins. Servis au verre (12 cl) ou à la bouteille (75 cl).</p>
+      <div class="dishes">
+        <div class="dish"><b>Bourgogne Aligoté<small>Blanc — vif et minéral, parfait avec les escargots</small></b><span class="p">4,50 € · 22 €</span></div>
+        <div class="dish"><b>Mâcon-Villages « Édouard Vincent »<small>Blanc — le chardonnay de la maison</small></b><span class="p">5,50 € · 26 €</span></div>
+        <div class="dish"><b>Viré-Clessé<small>Blanc — rond et gourmand</small></b><span class="p">6,50 € · 32 €</span></div>
+        <div class="dish"><b>Pouilly-Fuissé<small>Blanc — le grand mâconnais, pour la poularde</small></b><span class="p">8,00 € · 42 €</span></div>
+        <div class="dish"><b>Coteaux Bourguignons Pinot Noir<small>Rouge — souple et fruité</small></b><span class="p">5,00 € · 24 €</span></div>
+        <div class="dish"><b>Givry<small>Rouge — la Côte chalonnaise, l'ami des grillades</small></b><span class="p">6,50 € · 34 €</span></div>
+        <div class="dish"><b>Mercurey<small>Rouge — charpenté, pour la côte de bœuf</small></b><span class="p">7,50 € · 39 €</span></div>
+        <div class="dish"><b>Santenay<small>Rouge — Côte de Beaune, élégant</small></b><span class="p">44 €</span></div>
+        <div class="dish"><b>Gevrey-Chambertin<small>Rouge — la belle occasion</small></b><span class="p">68 €</span></div>
+        <div class="dish"><b>Coteaux d'Aix-en-Provence<small>Rosé — l'été à table</small></b><span class="p">5,00 € · 24 €</span></div>
+        <div class="dish"><b>Crémant de Bourgogne brut<small>Bulles — pour commencer</small></b><span class="p">6,50 € · 30 €</span></div>
+        <div class="dish"><b>Champagne brut<small>Bulles — pour fêter</small></b><span class="p">62 €</span></div>
+      </div>
+      <p class="sub" style="margin-top:16px">L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
+    </div>
+
     <p class="carte-note">Prix donnés à titre indicatif — la carte évolue avec les saisons et le marché. Une question, une allergie ? Appelez-nous au <a href="tel:+33385511241">03 85 51 12 41</a>.</p>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">En images</span>
+      <h2>L'intérieur &amp; l'extérieur</h2>
+      <p>La salle et sa cheminée, la façade et le parc du Village Motel — pour savoir où vous mettez les pieds avant même d'arriver.</p>
+    </div>
+    <div class="gallery">
+      <figure data-label="La façade &amp; le parking"><img src="photos/facade.jpg" alt="La façade du restaurant La Flambée à Tournus, avec son parking gratuit" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+      <figure data-label="La salle &amp; la cheminée"><img src="photos/salle-cheminee.jpg" alt="La salle du restaurant et sa cheminée où grillent les viandes au feu de bois" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+      <figure data-label="Côté grill"><img src="photos/grill.jpg" alt="Viandes charolaises grillées au feu de bois dans la cheminée" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+      <figure data-label="À table"><img src="photos/table.jpg" alt="Une table dressée au restaurant La Flambée" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+      <figure data-label="Le parc du Village Motel"><img src="photos/motel-parc.jpg" alt="Le parc arboré et la piscine du Village Motel, attenant au restaurant" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+      <figure data-label="Pizzas au feu de bois"><img src="photos/pizza.jpg" alt="Pizza maison cuite au feu de bois" loading="lazy" onerror="this.parentNode.classList.add('empty')"></figure>
+    </div>
+    <p style="text-align:center;margin-top:28px">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Restaurant+La+Flamb%C3%A9e+19+avenue+du+Clos+Mouron+71700+Tournus">📷 Voir toutes les photos sur Google</a>
+    </p>
   </div>
 </section>
 
@@ -377,14 +431,14 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--paper);c
     <div>
       <span class="kicker">Groupes &amp; séjours</span>
       <h2>Repas de famille, d'amis ou d'entreprise</h2>
-      <p style="color:var(--muted);font-size:.95rem">À partir de vingt convives, nous privatisons un espace et composons avec vous un menu sur mesure. Et pour dormir sur place, le Village Motel voisin propose ses chambres de plain-pied dans un grand parc arboré avec piscine — formule étape possible avec repas au restaurant.</p>
+      <p style="color:var(--muted);font-size:.95rem">À partir de vingt convives, nous privatisons un espace et composons avec vous un menu sur mesure. Et pour dormir sur place, le <b>Village Motel</b> attenant vous accueille depuis 1985 : 41 chambres et suites familiales climatisées, de plain-pied dans 3 hectares de verdure, avec piscine extérieure et parking privé devant chaque chambre — formule étape possible avec repas au restaurant.</p>
+      <a class="btn btn-blue" style="margin-top:20px" target="_blank" rel="noopener" href="https://village-motel.com/">🛏 Dormir au Village Motel — réserver une chambre</a>
     </div>
     <ul>
       <li>Groupes à partir de 20 personnes, midi et soir</li>
       <li>Menus sur mesure : anniversaires, baptêmes, repas d'affaires</li>
       <li>Formule étape avec le Village Motel attenant</li>
-      <li>Grande terrasse au jardin à la belle saison</li>
-      <li>Parking gratuit sur place, accès facile depuis l'A6</li>
+      <li>Parking facile et gratuit sur place, accès direct depuis l'A6 (sortie 27)</li>
     </ul>
   </div>
 </section>
@@ -436,7 +490,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--paper);c
   <div class="container foot">
     <span>© 2026 La Flambée — Brasserie · Grill · Pizzéria, 19 av. du Clos Mouron, 71700 Tournus.</span>
     <span class="mr">Maître Restaurateur</span>
-    <span><a href="#carte">La carte</a> · <a href="#groupes">Groupes</a> · <a href="#infos">Horaires &amp; accès</a> · <a href="tel:+33385511241">03 85 51 12 41</a></span>
+    <span><a href="#carte">La carte</a> · <a href="#vins">Les vins</a> · <a href="#photos">Photos</a> · <a href="https://village-motel.com/" target="_blank" rel="noopener">Village Motel</a> · <a href="#infos">Horaires &amp; accès</a> · <a href="tel:+33385511241">03 85 51 12 41</a></span>
   </div>
 </footer>
 

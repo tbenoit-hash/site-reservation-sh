@@ -61,6 +61,19 @@ RedirectMatch 301 ^/.*\.php$ /
    `photos/facade.jpg` : elle sert d'aperçu quand on partage le lien sur
    WhatsApp/Facebook (balise `og:image` déjà en place).
 3. L'**adresse email** du restaurant si l'on veut ajouter un contact email.
+4. **Les photos de la galerie** — créer un dossier `photos/` à côté de
+   `index.html` avec ces 6 fichiers (téléchargeables depuis la fiche Google
+   du restaurant, sa page galerie actuelle ou le téléphone du restaurateur) :
+   `facade.jpg`, `salle-cheminee.jpg`, `grill.jpg`, `table.jpg`,
+   `motel-parc.jpg`, `pizza.jpg`. Tant qu'une photo manque, sa vignette
+   affiche automatiquement une étiquette élégante à la place (rien n'est
+   cassé), et le bouton « Voir toutes les photos sur Google » fonctionne
+   dès aujourd'hui.
+5. **La carte des vins** — proposée à titre d'exemple avec des appellations
+   locales cohérentes (Mâconnais, Côte chalonnaise, Côte de Beaune) et des
+   prix calculés avec un coefficient d'environ ×3,5 sur le prix d'achat HT
+   (la marge habituelle en restauration : bouteille achetée 7 € HT → vendue
+   ~26 €). À ajuster selon les cuvées et fournisseurs réels du restaurant.
 
 ## Ce que cette refonte améliore (vs l'ancien site)
 
